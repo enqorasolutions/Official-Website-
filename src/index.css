@@ -3243,3 +3243,18 @@ body {
     bottom: 10px;
   }
 }
+
+/* HIDE HERO IMAGE/VISUAL ON MOBILE */
+@media (max-width: 768px) {
+  .hero-visual {
+    display: none !important;
+  }
+
+  .hero-container {
+    display: block;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+}
