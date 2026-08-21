@@ -2762,84 +2762,195 @@ a {
 }
 
 
-/* =====================================================
-   FINAL HERO MOBILE SETTINGS
-   Hide hero visual completely on phones
-===================================================== */
-
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+/* =========================================
+   FINAL HERO MOBILE FIX
+========================================= */
 
 @media (max-width: 768px) {
   .hero {
-    min-height: auto;
-    padding: 70px 0 60px;
-    overflow: hidden;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: hidden !important;
+    padding: 0 0 30px;
   }
 
   .hero-container {
-    min-height: auto;
-    display: block;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0 !important;
   }
 
+  /* TEXT FIRST */
   .hero-content {
-    width: 100%;
-    max-width: 100%;
-    text-align: left;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+    position: relative !important;
+    z-index: 5 !important;
+    padding: 45px 0 20px !important;
   }
 
-  .hero-content h1 {
-    font-size: clamp(38px, 10vw, 52px);
-    line-height: 1.1;
+  .hero h1 {
+    font-size: 38px !important;
+    line-height: 1.12 !important;
+    margin: 18px 0 !important;
   }
 
-  .hero-content p {
-    max-width: 100%;
-    margin: 18px 0 26px;
-    font-size: 15px;
-    line-height: 1.7;
+  .hero h1 br {
+    display: none !important;
+  }
+
+  .hero p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    max-width: 100% !important;
+    margin: 0 0 24px !important;
   }
 
   .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
   }
 
   .hero-buttons .btn {
-    width: 100%;
-    min-height: 52px;
-    justify-content: center;
+    width: 100% !important;
+    min-height: 50px !important;
+    justify-content: center !important;
   }
 
+  /* SMALL IMAGE AFTER TEXT */
   .hero-visual {
+    display: block !important;
+    visibility: visible !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 250px !important;
+    margin-top: 20px !important;
+    opacity: 1 !important;
+    animation: heroVisualEnter 0.8s ease forwards !important;
+    order: 2 !important;
+  }
+
+  /* SMALL LAPTOP */
+  .laptop {
+    width: 230px !important;
+    height: 160px !important;
+    right: 50% !important;
+    top: 25px !important;
+    transform: translateX(50%) rotate(5deg) !important;
+  }
+
+  .laptop-screen {
+    height: 140px !important;
+    border-width: 5px !important;
+    padding: 9px !important;
+    border-radius: 9px 9px 3px 3px !important;
+  }
+
+  .laptop-base {
+    width: 250px !important;
+    height: 18px !important;
+    left: -10px !important;
+  }
+
+  .code-window {
+    margin-top: 12px !important;
+    font-size: 7px !important;
+    line-height: 1.6 !important;
+  }
+
+  .screen-top span {
+    width: 5px !important;
+    height: 5px !important;
+  }
+
+  .big-code-icon {
+    right: 20px !important;
+    top: 40px !important;
+    transform: scale(0.65) !important;
+  }
+
+  /* SMALL PHONE */
+  .phone {
+    width: 65px !important;
+    height: 118px !important;
+    right: 12% !important;
+    top: 105px !important;
+    padding: 5px !important;
+  }
+
+  .phone-notch {
+    width: 28px !important;
+    height: 6px !important;
+    left: 18px !important;
+    top: 5px !important;
+  }
+
+  .phone-content {
+    padding: 20px 7px 7px !important;
+    border-radius: 8px !important;
+  }
+
+  .phone-icon {
+    width: 16px !important;
+    height: 16px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .phone-line {
+    height: 4px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .phone-box {
+    height: 30px !important;
+    margin-top: 8px !important;
+  }
+
+  /* HIDE EXTRA FLOATING ELEMENTS ON MOBILE */
+  .card-code,
+  .card-chart,
+  .card-stats,
+  .gear {
     display: none !important;
-    animation: none !important;
+  }
+
+  /* EYEBROW */
+  .hero-content .eyebrow {
+    font-size: 10px !important;
+    letter-spacing: 1.5px !important;
+    padding: 9px 12px !important;
   }
 }
 
-@media (max-width: 480px) {
-  .hero {
-    padding: 55px 0 50px;
+/* Extra small phones */
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 33px !important;
   }
 
-  .hero-content h1 {
-    font-size: 38px;
-    line-height: 1.08;
+  .hero-content p {
+    font-size: 14px !important;
   }
 
-  .hero .eyebrow {
-    font-size: 10px;
-    letter-spacing: 1.2px;
-    margin-bottom: 16px;
-  }
-}
-@media (max-width: 768px) {
   .hero-visual {
-    display: none !important;
+    height: 220px !important;
+  }
+
+  .laptop {
+    width: 210px !important;
+    height: 145px !important;
+  }
+
+  .laptop-screen {
+    height: 125px !important;
+  }
+
+  .laptop-base {
+    width: 225px !important;
   }
 }
