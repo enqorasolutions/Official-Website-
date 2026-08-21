@@ -1890,24 +1890,6 @@ a {
   cursor: not-allowed;
 }
 
-.form-success {
-  margin-top: 5px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #2e8b57;
-}
-
-.form-error {
-  margin-top: 5px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #c94b4b;
-}
-
-.submit-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
 /* ================= HOME INTRO ================= */
 
 .home-intro {
@@ -2779,140 +2761,10 @@ a {
   }
 }
 
-/* ========================================
-   HERO MOBILE FIX
-======================================== */
 
-@media (max-width: 768px) {
-  .hero {
-    overflow: hidden;
-    padding: 110px 0 70px;
-  }
-
-  .hero-container {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-  }
-
-  .hero-content {
-    width: 100%;
-    text-align: left;
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-content h1 {
-    font-size: clamp(42px, 12vw, 58px);
-    line-height: 1.05;
-  }
-
-  .hero-content p {
-    font-size: 16px;
-    line-height: 1.7;
-  }
-
-  .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-  }
-
-  .hero-buttons .btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* HERO IMAGE AREA */
-  .hero-visual {
-    position: relative;
-    width: 100%;
-    height: 330px;
-    min-height: 330px;
-    margin-top: 10px;
-    transform: scale(0.72);
-    transform-origin: top center;
-  }
-
-  /* LAPTOP */
-  .laptop {
-    width: 430px;
-    max-width: none;
-    position: absolute;
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
-  }
-
-  .laptop-screen {
-    height: 250px;
-  }
-
-  .laptop-base {
-    height: 18px;
-  }
-
-  /* Make code smaller */
-  .code-window {
-    font-size: 13px;
-    line-height: 1.6;
-  }
-
-  .big-code-icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  /* PHONE */
-  .phone {
-    transform: scale(0.7);
-    transform-origin: center;
-  }
-
-  /* FLOATING CARDS */
-  .floating-card {
-    transform: scale(0.75);
-  }
-
-  /* GEAR */
-  .gear {
-    font-size: 50px;
-    transform: scale(0.7);
-  }
-}
-
-
-/* EXTRA SMALL PHONES */
-@media (max-width: 480px) {
-  .hero {
-    padding-top: 95px;
-  }
-
-  .hero-content h1 {
-    font-size: 42px;
-  }
-
-  .eyebrow {
-    font-size: 13px;
-    padding: 12px 16px;
-  }
-
-  .hero-visual {
-    position: relative;
-    height: 280px;
-    min-height: 280px;
-    transform: scale(0.62);
-    transform-origin: top center;
-  }
-
-  .laptop {
-    width: 400px;
-  }
-}
 /* =====================================================
-   HERO - CLEAN MOBILE FIX
-   KEEP THIS AT THE VERY END OF index.css
+   FINAL HERO MOBILE SETTINGS
+   Hide hero visual completely on phones
 ===================================================== */
 
 html,
@@ -2921,22 +2773,21 @@ body {
   overflow-x: hidden;
 }
 
-/* TABLET + MOBILE */
 @media (max-width: 768px) {
-
   .hero {
-    padding: 95px 0 45px;
+    min-height: auto;
+    padding: 70px 0 60px;
     overflow: hidden;
   }
 
   .hero-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    min-height: auto;
+    display: block;
   }
 
   .hero-content {
     width: 100%;
+    max-width: 100%;
     text-align: left;
   }
 
@@ -2947,205 +2798,33 @@ body {
 
   .hero-content p {
     max-width: 100%;
+    margin: 18px 0 26px;
     font-size: 15px;
+    line-height: 1.7;
   }
 
   .hero-buttons {
-    width: 100%;
     display: flex;
+    flex-direction: column;
+    width: 100%;
     gap: 12px;
   }
 
   .hero-buttons .btn {
-    flex: 1;
+    width: 100%;
+    min-height: 52px;
     justify-content: center;
   }
 
-  /* HERO IMAGE AREA */
   .hero-visual {
-    width: 100%;
-    height: 290px;
-    min-height: 290px;
-    position: relative;
-    margin: 0;
-    overflow: hidden;
-  }
-
-  /* LAPTOP */
-  .laptop {
-    width: 250px;
-    height: auto;
-
-    position: absolute;
-    left: 50%;
-    right: auto;
-    top: 20px;
-
-    transform: translateX(-50%) rotate(4deg) !important;
-    animation: none !important;
-  }
-
-  .laptop-screen {
-    width: 100%;
-    height: 175px;
-    min-height: 0;
-    right: auto !important;
-    padding: 10px;
-    border-width: 6px;
-  }
-
-  .laptop-base {
-    width: 270px;
-    height: 20px;
-
-    left: 50% !important;
-    bottom: -18px;
-
-    transform: translateX(-50%);
-  }
-
-  .screen-top span {
-    width: 5px;
-    height: 5px;
-  }
-
-  .code-window {
-    margin-top: 15px;
-    font-size: 8px;
-    line-height: 1.6;
-  }
-
-  .indent {
-    margin-left: 10px;
-  }
-
-  .big-code-icon {
-    width: 45px;
-    height: 45px;
-
-    right: 20px;
-    top: 50px;
-  }
-
-  /* PHONE */
-  .phone {
-    width: 60px;
-    height: 110px;
-
-    right: 8%;
-    top: 75px;
-
-    padding: 5px;
-    border-radius: 11px;
-
-    transform: rotate(10deg) !important;
-    animation: none !important;
-  }
-
-  .phone-notch {
-    width: 26px;
-    height: 6px;
-
-    left: 17px;
-    top: 5px;
-  }
-
-  .phone-content {
-    padding: 22px 7px 7px;
-  }
-
-  .phone-icon {
-    width: 14px;
-    height: 14px;
-    margin-bottom: 8px;
-  }
-
-  .phone-line {
-    height: 4px;
-    margin-bottom: 5px;
-  }
-
-  .phone-box {
-    height: 28px;
-    margin-top: 8px;
-  }
-
-  /* FLOATING CARDS */
-  .floating-card {
-    animation: none !important;
-  }
-
-  .card-code {
-    left: 5%;
-    top: 45px;
-    padding: 10px;
-
-    transform: rotate(-5deg) !important;
-  }
-
-  .card-code svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .card-chart {
-    width: 82px;
-
-    left: auto;
-    right: 2%;
-    top: 30px;
-
-    padding: 8px;
-    gap: 6px;
-
-    transform: rotate(5deg) !important;
-  }
-
-  .card-chart svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .chart-lines span {
-    height: 3px;
-    margin: 4px 0;
-  }
-
-  .card-stats {
-    left: 10%;
-    bottom: 20px;
-    padding: 9px;
-
-    transform: rotate(3deg) !important;
-  }
-
-  .card-stats svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  /* GEAR */
-  .gear {
-    font-size: 40px;
-
-    right: 12%;
-    bottom: 15px;
-
-    transform: none !important;
+    display: none !important;
     animation: none !important;
   }
 }
 
-
-/* SMALL PHONE - 480px AND BELOW */
 @media (max-width: 480px) {
-
   .hero {
-    padding: 90px 0 35px;
-  }
-
-  .hero-container {
-    gap: 22px;
+    padding: 55px 0 50px;
   }
 
   .hero-content h1 {
@@ -3153,108 +2832,9 @@ body {
     line-height: 1.08;
   }
 
-  .hero-content p {
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
-  .eyebrow {
+  .hero .eyebrow {
     font-size: 10px;
-    letter-spacing: 1.3px;
-  }
-
-  /* BUTTONS */
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .hero-buttons .btn {
-    width: 100%;
-    min-height: 52px;
-  }
-
-  /* SMALL HERO VISUAL */
-  .hero-visual {
-    height: 270px;
-    min-height: 270px;
-  }
-
-  .laptop {
-    width: 220px;
-    top: 25px;
-
-    transform: translateX(-50%) rotate(3deg) !important;
-  }
-
-  .laptop-screen {
-    height: 155px;
-    padding: 8px;
-  }
-
-  .laptop-base {
-    width: 240px;
-    height: 18px;
-    bottom: -16px;
-  }
-
-  .code-window {
-    margin-top: 12px;
-    font-size: 7px;
-  }
-
-  .big-code-icon {
-    width: 35px;
-    height: 35px;
-    right: 15px;
-    top: 45px;
-  }
-
-  /* Keep decorations small */
-  .phone {
-    width: 52px;
-    height: 96px;
-
-    right: 4%;
-    top: 70px;
-  }
-
-  .card-code {
-    left: 2%;
-    top: 45px;
-    padding: 8px;
-  }
-
-  .card-chart {
-    width: 70px;
-    right: 0;
-    top: 30px;
-    padding: 6px;
-  }
-
-  .card-stats {
-    left: 8%;
-    bottom: 12px;
-    padding: 7px;
-  }
-
-  .gear {
-    font-size: 34px;
-    right: 10%;
-    bottom: 10px;
-  }
-}
-
-/* HIDE HERO IMAGE/VISUAL ON MOBILE */
-@media (max-width: 768px) {
-  .hero-visual {
-    display: none !important;
-  }
-
-  .hero-container {
-    display: block;
-  }
-
-  .hero-content {
-    width: 100%;
+    letter-spacing: 1.2px;
+    margin-bottom: 16px;
   }
 }
