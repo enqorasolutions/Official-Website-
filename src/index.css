@@ -2824,7 +2824,7 @@ a {
 
   /* SMALL IMAGE AFTER TEXT */
   .hero-visual {
-    display: block !important;
+    display: none !important;
     visibility: visible !important;
     position: relative !important;
     width: 100% !important;
@@ -2938,6 +2938,7 @@ a {
   }
 
   .hero-visual {
+    display: none;
     height: 220px !important;
   }
 
