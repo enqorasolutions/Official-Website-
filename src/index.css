@@ -223,7 +223,7 @@ a {
   position: absolute;
   width: 390px;
   height: 270px;
-  right: 70px;
+  right: -100px;
   top: 80px;
   transform: rotate(8deg);
   z-index: 3;
@@ -2592,6 +2592,7 @@ a {
 .hero-visual {
   opacity: 0;
   animation: heroVisualEnter 1s ease 0.3s forwards;
+ 
 }
 
 @keyframes heroVisualEnter {
@@ -2775,5 +2776,193 @@ a {
   .glow-2 {
     animation: none !important;
     opacity: 1;
+  }
+}
+/* ========================================
+   HERO MOBILE FIX - FINAL
+======================================== */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* TABLET + MOBILE */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 105px 0 45px;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .hero-content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(42px, 11vw, 58px);
+    line-height: 1.08;
+  }
+
+  .hero-content p {
+    max-width: 100%;
+  }
+
+  /* Buttons */
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Visual container */
+  .hero-visual {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    min-height: 380px;
+
+    /* Important: remove desktop offsets */
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+
+    margin: 0;
+    overflow: visible;
+  }
+
+  /* Laptop */
+  .laptop {
+    position: absolute;
+    width: 300px;
+    max-width: none;
+
+    left: 50%;
+    right: auto;
+    top: 35px;
+
+    transform: translateX(-50%);
+  }
+
+  .laptop-screen {
+    width: 100%;
+  }
+
+  /* Keep visual elements inside screen */
+  .phone {
+    transform: scale(0.65);
+    transform-origin: center;
+  }
+
+  .floating-card {
+    transform: scale(0.75);
+  }
+
+  .gear {
+    transform: scale(0.65);
+  }
+}
+
+
+/* SMALL MOBILE - iPhone SE / 320px */
+@media (max-width: 480px) {
+
+  .hero {
+    padding: 90px 0 35px;
+  }
+
+  .hero-container {
+    gap: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+    line-height: 1.08;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  /* Full-width buttons */
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    min-height: 52px;
+    justify-content: center;
+  }
+
+  /* Hero visual */
+  .hero-visual {
+    width: 100%;
+    height: 300px;
+    min-height: 300px;
+    margin-top: 10px;
+  }
+
+  .laptop {
+    width: 260px;
+
+    left: 50%;
+    top: 25px;
+
+    transform: translateX(-50%);
+  }
+
+  .laptop-screen {
+    min-height: 175px;
+    right: 115px;
+  }
+  .laptop-base {
+    width: 302px;
+    height: 31px;
+    position: absolute;
+    left: -140px;
+    bottom: 0;
+    background: linear-gradient(180deg, #d9d6d4, #9c9998);
+    border-radius: 0 0 20px 20px;
+}
+
+  .code-window {
+    font-size: 10px;
+  }
+
+  .big-code-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  /* Hide overlapping decorations on very small phones */
+  .phone,
+  .floating-card,
+  .gear {
+    display: none;
   }
 }

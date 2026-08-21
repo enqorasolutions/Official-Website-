@@ -8,6 +8,8 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 
+import { Link } from "react-router-dom";
+
 const services = [
   {
     icon: Code2,
@@ -16,7 +18,6 @@ const services = [
     description:
       "Custom software solutions designed around your business requirements.",
   },
-
   {
     icon: Globe,
     number: "02",
@@ -24,7 +25,6 @@ const services = [
     description:
       "Modern, responsive and high-performance websites that grow your online presence.",
   },
-
   {
     icon: Smartphone,
     number: "03",
@@ -32,7 +32,6 @@ const services = [
     description:
       "Powerful mobile applications designed for exceptional user experiences.",
   },
-
   {
     icon: BrainCircuit,
     number: "04",
@@ -40,7 +39,6 @@ const services = [
     description:
       "Intelligent solutions using artificial intelligence and machine learning.",
   },
-
   {
     icon: Settings,
     number: "05",
@@ -48,7 +46,6 @@ const services = [
     description:
       "Reliable technical support and ongoing maintenance for your digital products.",
   },
-
   {
     icon: Users,
     number: "06",
@@ -61,12 +58,10 @@ const services = [
 function Services() {
   return (
     <section className="services section" id="services">
-
       <div className="container">
 
         {/* HEADING */}
         <div className="services-heading">
-
           <div>
             <span className="section-tag">
               WHAT WE DO
@@ -83,15 +78,11 @@ function Services() {
             technology solutions designed to help your business
             move forward.
           </p>
-
         </div>
-
 
         {/* SERVICE GRID */}
         <div className="services-grid">
-
           {services.map((service) => {
-
             const Icon = service.icon;
 
             return (
@@ -99,9 +90,7 @@ function Services() {
                 className="service-card"
                 key={service.number}
               >
-
                 <div className="service-card-top">
-
                   <span className="service-number">
                     {service.number}
                   </span>
@@ -109,43 +98,31 @@ function Services() {
                   <div className="service-icon">
                     <Icon size={25} />
                   </div>
-
                 </div>
 
+                <h3>{service.title}</h3>
 
-                <h3>
-                  {service.title}
-                </h3>
+                <p>{service.description}</p>
 
-                <p>
-                  {service.description}
-                </p>
-
-
-                <a href="/services" className="service-link">
+                {/* GO TO CONTACT PAGE */}
+                <Link to="/contact" className="service-link">
                   Learn More
                   <ArrowUpRight size={17} />
-                </a>
-
+                </Link>
               </div>
             );
-
           })}
-
         </div>
 
-
         <div className="services-bottom">
-
-          <a href="/services" className="text-link">
+          {/* View All Services still goes to Services page */}
+          <Link to="/services" className="text-link">
             View All Services
             <span>→</span>
-          </a>
-
+          </Link>
         </div>
 
       </div>
-
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import { CheckCircle2, ArrowRight, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function WhyChooseUs() {
   const features = [
@@ -37,10 +38,11 @@ function WhyChooseUs() {
             ))}
           </div>
 
-          <a href="#contact" className="btn btn-primary">
+          {/* Redirects to About Us page */}
+          <Link to="/about" className="btn btn-primary">
             More About Us
             <ArrowRight size={18} />
-          </a>
+          </Link>
         </div>
 
         {/* Right Visual */}

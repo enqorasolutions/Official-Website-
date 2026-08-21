@@ -1,4 +1,5 @@
 import { ArrowRight, Code2, BarChart3, PieChart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -7,6 +8,7 @@ function Hero() {
       <div className="hero-glow glow-2"></div>
 
       <div className="container hero-container">
+        {/* HERO CONTENT */}
         <div className="hero-content">
           <span className="eyebrow">
             WE BUILD DIGITAL FUTURES
@@ -24,25 +26,28 @@ function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <a href="#contact" className="btn btn-primary">
+            <Link to="/contact" className="btn btn-primary">
               Get Started
               <ArrowRight size={18} />
-            </a>
+            </Link>
 
-            <a href="#services" className="btn btn-outline">
+            <Link to="/services" className="btn btn-outline">
               Our Services
               <ArrowRight size={18} />
-            </a>
+            </Link>
           </div>
         </div>
 
+        {/* HERO VISUAL */}
         <div className="hero-visual">
+
           <div className="floating-card card-code">
             <Code2 size={28} />
           </div>
 
           <div className="floating-card card-chart">
             <PieChart size={30} />
+
             <div className="chart-lines">
               <span></span>
               <span></span>
@@ -53,8 +58,10 @@ function Hero() {
             <BarChart3 size={27} />
           </div>
 
+          {/* LAPTOP */}
           <div className="laptop">
             <div className="laptop-screen">
+
               <div className="screen-top">
                 <span></span>
                 <span></span>
@@ -64,26 +71,37 @@ function Hero() {
               <div className="code-window">
                 <span className="code-pink">const</span>{" "}
                 <span>Enqora</span> = {"{"}
+
                 <br />
+
                 <span className="indent">
                   innovation: <b>true</b>,
                 </span>
+
                 <br />
+
                 <span className="indent">
                   solutions: <b>"digital"</b>
                 </span>
+
                 <br />
+
                 {"}"}
               </div>
 
-              <Code2 className="big-code-icon" size={75} />
+              <Code2
+                className="big-code-icon"
+                size={75}
+              />
             </div>
 
             <div className="laptop-base"></div>
           </div>
 
+          {/* PHONE */}
           <div className="phone">
             <div className="phone-notch"></div>
+
             <div className="phone-content">
               <div className="phone-icon"></div>
               <div className="phone-line"></div>
@@ -92,6 +110,7 @@ function Hero() {
             </div>
           </div>
 
+          {/* GEAR */}
           <div className="gear">⚙</div>
         </div>
       </div>
