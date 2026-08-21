@@ -2778,195 +2778,6 @@ a {
     opacity: 1;
   }
 }
-/* ========================================
-   HERO MOBILE FIX - FINAL
-======================================== */
-
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-.hero {
-  width: 100%;
-  overflow: hidden;
-}
-
-
-/* TABLET + MOBILE */
-@media (max-width: 768px) {
-
-  .hero {
-    padding: 105px 0 45px;
-  }
-
-  .hero-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 35px;
-  }
-
-  .hero-content {
-    width: 100%;
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-content h1 {
-    font-size: clamp(42px, 11vw, 58px);
-    line-height: 1.08;
-  }
-
-  .hero-content p {
-    max-width: 100%;
-  }
-
-  /* Buttons */
-  .hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  /* Visual container */
-  .hero-visual {
-    position: relative;
-    width: 100%;
-    height: 380px;
-    min-height: 380px;
-
-    /* Important: remove desktop offsets */
-    left: auto;
-    right: auto;
-    top: auto;
-    bottom: auto;
-
-    margin: 0;
-    overflow: visible;
-  }
-
-  /* Laptop */
-  .laptop {
-    position: absolute;
-    width: 300px;
-    max-width: none;
-
-    left: 50%;
-    right: auto;
-    top: 35px;
-
-    transform: translateX(-50%);
-  }
-
-  .laptop-screen {
-    width: 100%;
-  }
-
-  /* Keep visual elements inside screen */
-  .phone {
-    transform: scale(0.65);
-    transform-origin: center;
-  }
-
-  .floating-card {
-    transform: scale(0.75);
-  }
-
-  .gear {
-    transform: scale(0.65);
-  }
-}
-
-
-/* SMALL MOBILE - iPhone SE / 320px */
-@media (max-width: 480px) {
-
-  .hero {
-    padding: 90px 0 35px;
-  }
-
-  .hero-container {
-    gap: 20px;
-  }
-
-  .hero-content h1 {
-    font-size: 42px;
-    line-height: 1.08;
-  }
-
-  .hero-content p {
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
-  .eyebrow {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-  }
-
-  /* Full-width buttons */
-  .hero-buttons {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .hero-buttons .btn {
-    width: 100%;
-    min-height: 52px;
-    justify-content: center;
-  }
-
-  /* Hero visual */
-  .hero-visual {
-    width: 100%;
-    height: 300px;
-    min-height: 300px;
-    margin-top: 10px;
-  }
-
-  .laptop {
-    width: 260px;
-
-    left: 50%;
-    top: 25px;
-
-    transform: translateX(-50%);
-  }
-
-  .laptop-screen {
-    min-height: 175px;
-    right: 115px;
-  }
-  .laptop-base {
-    width: 302px;
-    height: 31px;
-    position: absolute;
-    left: -140px;
-    bottom: 0;
-    background: linear-gradient(180deg, #d9d6d4, #9c9998);
-    border-radius: 0 0 20px 20px;
-}
-
-  .code-window {
-    font-size: 10px;
-  }
-
-  .big-code-icon {
-    width: 45px;
-    height: 45px;
-  }
-
-  /* Hide overlapping decorations on very small phones */
-  .phone,
-  .floating-card,
-  .gear {
-    display: none;
-  }
-}
-
 
 /* ========================================
    HERO MOBILE FIX
@@ -3097,5 +2908,338 @@ body {
 
   .laptop {
     width: 400px;
+  }
+}
+/* =====================================================
+   HERO - CLEAN MOBILE FIX
+   KEEP THIS AT THE VERY END OF index.css
+===================================================== */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* TABLET + MOBILE */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 95px 0 45px;
+    overflow: hidden;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero-content {
+    width: 100%;
+    text-align: left;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(38px, 10vw, 52px);
+    line-height: 1.1;
+  }
+
+  .hero-content p {
+    max-width: 100%;
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+  }
+
+  .hero-buttons .btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  /* HERO IMAGE AREA */
+  .hero-visual {
+    width: 100%;
+    height: 290px;
+    min-height: 290px;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  /* LAPTOP */
+  .laptop {
+    width: 250px;
+    height: auto;
+
+    position: absolute;
+    left: 50%;
+    right: auto;
+    top: 20px;
+
+    transform: translateX(-50%) rotate(4deg) !important;
+    animation: none !important;
+  }
+
+  .laptop-screen {
+    width: 100%;
+    height: 175px;
+    min-height: 0;
+    right: auto !important;
+    padding: 10px;
+    border-width: 6px;
+  }
+
+  .laptop-base {
+    width: 270px;
+    height: 20px;
+
+    left: 50% !important;
+    bottom: -18px;
+
+    transform: translateX(-50%);
+  }
+
+  .screen-top span {
+    width: 5px;
+    height: 5px;
+  }
+
+  .code-window {
+    margin-top: 15px;
+    font-size: 8px;
+    line-height: 1.6;
+  }
+
+  .indent {
+    margin-left: 10px;
+  }
+
+  .big-code-icon {
+    width: 45px;
+    height: 45px;
+
+    right: 20px;
+    top: 50px;
+  }
+
+  /* PHONE */
+  .phone {
+    width: 60px;
+    height: 110px;
+
+    right: 8%;
+    top: 75px;
+
+    padding: 5px;
+    border-radius: 11px;
+
+    transform: rotate(10deg) !important;
+    animation: none !important;
+  }
+
+  .phone-notch {
+    width: 26px;
+    height: 6px;
+
+    left: 17px;
+    top: 5px;
+  }
+
+  .phone-content {
+    padding: 22px 7px 7px;
+  }
+
+  .phone-icon {
+    width: 14px;
+    height: 14px;
+    margin-bottom: 8px;
+  }
+
+  .phone-line {
+    height: 4px;
+    margin-bottom: 5px;
+  }
+
+  .phone-box {
+    height: 28px;
+    margin-top: 8px;
+  }
+
+  /* FLOATING CARDS */
+  .floating-card {
+    animation: none !important;
+  }
+
+  .card-code {
+    left: 5%;
+    top: 45px;
+    padding: 10px;
+
+    transform: rotate(-5deg) !important;
+  }
+
+  .card-code svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .card-chart {
+    width: 82px;
+
+    left: auto;
+    right: 2%;
+    top: 30px;
+
+    padding: 8px;
+    gap: 6px;
+
+    transform: rotate(5deg) !important;
+  }
+
+  .card-chart svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .chart-lines span {
+    height: 3px;
+    margin: 4px 0;
+  }
+
+  .card-stats {
+    left: 10%;
+    bottom: 20px;
+    padding: 9px;
+
+    transform: rotate(3deg) !important;
+  }
+
+  .card-stats svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* GEAR */
+  .gear {
+    font-size: 40px;
+
+    right: 12%;
+    bottom: 15px;
+
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+
+/* SMALL PHONE - 480px AND BELOW */
+@media (max-width: 480px) {
+
+  .hero {
+    padding: 90px 0 35px;
+  }
+
+  .hero-container {
+    gap: 22px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+    line-height: 1.08;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.3px;
+  }
+
+  /* BUTTONS */
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    min-height: 52px;
+  }
+
+  /* SMALL HERO VISUAL */
+  .hero-visual {
+    height: 270px;
+    min-height: 270px;
+  }
+
+  .laptop {
+    width: 220px;
+    top: 25px;
+
+    transform: translateX(-50%) rotate(3deg) !important;
+  }
+
+  .laptop-screen {
+    height: 155px;
+    padding: 8px;
+  }
+
+  .laptop-base {
+    width: 240px;
+    height: 18px;
+    bottom: -16px;
+  }
+
+  .code-window {
+    margin-top: 12px;
+    font-size: 7px;
+  }
+
+  .big-code-icon {
+    width: 35px;
+    height: 35px;
+    right: 15px;
+    top: 45px;
+  }
+
+  /* Keep decorations small */
+  .phone {
+    width: 52px;
+    height: 96px;
+
+    right: 4%;
+    top: 70px;
+  }
+
+  .card-code {
+    left: 2%;
+    top: 45px;
+    padding: 8px;
+  }
+
+  .card-chart {
+    width: 70px;
+    right: 0;
+    top: 30px;
+    padding: 6px;
+  }
+
+  .card-stats {
+    left: 8%;
+    bottom: 12px;
+    padding: 7px;
+  }
+
+  .gear {
+    font-size: 34px;
+    right: 10%;
+    bottom: 10px;
   }
 }
