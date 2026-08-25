@@ -2824,24 +2824,23 @@ a {
 
   /* SMALL IMAGE AFTER TEXT */
   .hero-visual {
-    display: none !important;
-    visibility: visible !important;
+    display: block !important;
+    width: 100% !important;
+    height: 180px !important;
     position: relative !important;
+    /* position: relative !important;
     width: 100% !important;
     height: 250px !important;
     margin-top: 20px !important;
     opacity: 1 !important;
     animation: heroVisualEnter 0.8s ease forwards !important;
-    order: 2 !important;
+    order: 2 !important; */
   }
 
   /* SMALL LAPTOP */
   .laptop {
-    width: 230px !important;
-    height: 160px !important;
-    right: 50% !important;
-    top: 25px !important;
-    transform: translateX(50%) rotate(5deg) !important;
+     display: none !important;
+    visibility: hidden !important;
   }
 
   .laptop-screen {
@@ -2876,11 +2875,16 @@ a {
 
   /* SMALL PHONE */
   .phone {
+      display: block !important;
     width: 65px !important;
+    height: 118px !important;
+    right: 20% !important;
+    top: 25px !important;
+    /* width: 65px !important;
     height: 118px !important;
     right: 12% !important;
     top: 105px !important;
-    padding: 5px !important;
+    padding: 5px !important; */
   }
 
   .phone-notch {
@@ -2938,13 +2942,15 @@ a {
   }
 
   .hero-visual {
-    display: none;
-    height: 220px !important;
+  display: block !important;
+    width: 100% !important;
+    height: 180px !important;
+    position: relative !important;
   }
 
   .laptop {
-    width: 210px !important;
-    height: 145px !important;
+      display: none !important;
+    visibility: hidden !important;
   }
 
   .laptop-screen {
@@ -2953,5 +2959,66 @@ a {
 
   .laptop-base {
     width: 225px !important;
+  }
+}
+@media (max-width: 390px) {
+
+  /* Remove laptop and all hero visual objects */
+  .hero-visual {
+    display: none !important;
+  }
+
+  /* Hero spacing */
+  .hero {
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  .hero-container {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    padding: 30px 0 55px !important;
+    text-align: left !important;
+  }
+
+  /* Hero badge */
+  .hero .eyebrow {
+    font-size: 11px !important;
+    padding: 9px 12px !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* Hero heading */
+  .hero h1 {
+    font-size: 36px !important;
+    line-height: 1.08 !important;
+    margin: 15px 0 !important;
+  }
+
+  /* Description */
+  .hero p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin: 18px 0 25px !important;
+  }
+
+  /* Buttons */
+  .hero-buttons {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+
+  .hero-buttons .btn {
+    flex: 1 !important;
+    width: auto !important;
+    min-height: 52px !important;
+    padding: 0 12px !important;
+    font-size: 14px !important;
   }
 }
